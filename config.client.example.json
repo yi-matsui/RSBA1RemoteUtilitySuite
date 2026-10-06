@@ -1,0 +1,43 @@
+{
+  "server": {
+    "host": "2001:db8::10",
+    "control_port": 50001,
+    "civ_port": 50002,
+    "audio_port": 50003
+  },
+  "local": {
+    "bind_address": "::"
+  },
+  "auth": {
+    "username": "operator",
+    "password": "CHANGE_ME"
+  },
+  "session": {
+    "handshake_timeout_ms": 3000,
+    "auto_reconnect": true,
+    "reconnect_interval_ms": 3000
+  },
+  "civ": {
+    "serial_device": "COM10",
+    "serial_baud": 19200
+  },
+  "audio": {
+    "backend": "auto",
+    "codec": "pcm",
+    "sample_rate": 48000,
+    "channels": 1,
+    "frame_ms": 10,
+    "opus_bitrate": 64000,
+    "jitter_min_ms": 20,
+    "jitter_max_ms": 80,
+    "capture_device": "default",
+    "playback_device": "default"
+  },
+  "logging": {
+    "level": "info",
+    "file": "client_bridge.log",
+    "max_file_bytes": 10485760,
+    "max_backups": 5,
+    "to_stderr": true
+  }
+}

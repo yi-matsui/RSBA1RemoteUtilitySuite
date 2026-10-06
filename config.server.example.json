@@ -1,0 +1,61 @@
+{
+  "listen": {
+    "address": "::",
+    "control_port": 50001,
+    "civ_port": 50002,
+    "audio_port": 50003
+  },
+  "auth": {
+    "username": "operator",
+    "password": "CHANGE_ME",
+    "pbkdf2_iterations": 100000,
+    "max_failures": 5,
+    "failure_window_seconds": 300,
+    "ban_seconds": 900
+  },
+  "session": {
+    "keepalive_interval_ms": 1000,
+    "keepalive_timeout_ms": 5000,
+    "challenge_timeout_ms": 5000
+  },
+  "radio": {
+    "model": "IC-9100",
+    "civ_address": "0x7C",
+    "controller_address": "0xE0",
+    "serial_device": "/dev/ttyUSB0",
+    "serial_baud": 19200,
+    "audio_capture_device": "plughw:CARD=CODEC,DEV=0",
+    "audio_playback_device": "plughw:CARD=CODEC,DEV=0"
+  },
+  "audio": {
+    "backend": "auto",
+    "codec": "pcm",
+    "sample_rate": 48000,
+    "channels": 1,
+    "frame_ms": 10,
+    "opus_bitrate": 64000,
+    "jitter_min_ms": 20,
+    "jitter_max_ms": 80
+  },
+  "usb_reset": {
+    "enabled": true,
+    "vid_pid": "10C4:EA60",
+    "serial": "",
+    "device_id": "",
+    "reset_parent": false,
+    "method": "auto",
+    "serial_timeout_threshold": 3,
+    "rx_garbage_threshold": 4096,
+    "recovery_timeout_ms": 15000,
+    "poll_interval_ms": 250,
+    "min_interval_seconds": 60
+  },
+  "logging": {
+    "level": "info",
+    "file": "/var/log/rsba/server_bridge.log",
+    "max_file_bytes": 10485760,
+    "max_backups": 5,
+    "to_stderr": true,
+    "usb_reset_file": "/var/log/rsba/usb_reset.log"
+  }
+}

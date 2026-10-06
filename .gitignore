@@ -1,0 +1,32 @@
+# CMake out-of-tree build directories
+/build/
+/build-*/
+/out/
+CMakeUserPresets.json
+
+# Compiled artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.pdb
+*.ilk
+
+# IDE
+.vs/
+.vscode/
+*.user
+
+# Local configuration (copy from config.*.example.json)
+/config.server.json
+/config.client.json
+
+# Logs
+*.log
+logs/
+
+# etc
+SPEC.md
